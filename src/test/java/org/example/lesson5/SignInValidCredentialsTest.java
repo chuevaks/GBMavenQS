@@ -1,6 +1,6 @@
 package org.example.lesson5;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -21,14 +21,14 @@ public class SignInValidCredentialsTest extends BaseTest{
         WebElement we = getDriver().findElement(By.xpath("//a[@title='View my customer account']"));
         String text = "Name LName";
         String actualText = we.getText();
-        Assert.assertEquals(actualText, text);
+        Assertions.assertEquals(actualText, text);
 
         getDriver().findElement(By.xpath("//a[@class='logout']"))
                 .click();
         WebElement we2 = getDriver().findElement(By.xpath("//h1[@class='page-heading']"));
         String text2 = "AUTHENTICATION";
         String actualText2 = we2.getText();
-        Assert.assertEquals(actualText2, text2);
+        Assertions.assertEquals(actualText2, text2);
 
     }
 

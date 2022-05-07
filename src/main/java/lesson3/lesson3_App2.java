@@ -2,7 +2,7 @@ package lesson3;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -39,7 +39,7 @@ public class lesson3_App2 {
             WebElement webElement5 = driver.findElement(By.xpath("//p[@class='alert alert-success']"));
             String text = "Your message has been successfully sent to our team.";
             String actualText = webElement5.getText();
-            Assert.assertEquals(actualText, text);
+            Assertions.assertEquals(actualText, text);
             Thread.sleep(5000l);
 
         } catch (Exception e) {

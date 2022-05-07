@@ -1,6 +1,6 @@
 package org.example.lesson5;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -24,7 +24,7 @@ public class ContactUs_linkTest extends BaseTest {
         WebElement webElement5 = getDriver().findElement(By.xpath("//p[@class='alert alert-success']"));
         String text = "Your message has been successfully sent to our team.";
         String actualText = webElement5.getText();
-        Assert.assertEquals(actualText, text);
+        Assertions.assertEquals(actualText, text);
 
         Thread.sleep(5000l);
 

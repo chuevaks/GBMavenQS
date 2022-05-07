@@ -1,6 +1,6 @@
 package org.example.lesson5;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -27,7 +27,7 @@ public class SearchTest extends BaseTest{
         WebElement we = getDriver().findElement(By.xpath("//span[@class='heading-counter']"));
         String text = "1 result has been found.";
         String actualText = we.getText();
-        Assert.assertEquals(actualText, text);
+        Assertions.assertEquals(actualText, text);
 
     }
 }

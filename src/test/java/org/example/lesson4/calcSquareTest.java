@@ -1,7 +1,6 @@
 package org.example.lesson4;
 
 import lesson4.Triangle;
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -26,7 +25,7 @@ public class calcSquareTest {
     @CsvSource({"3,4,5,6", "4,5,6,9.9215"})
     public void testCalc( int a, int b, int c, double s){
         double actualResult =  Triangle.calcSquare(a, b, c);
-        Assert.assertEquals(s,actualResult,0.0001);
+        Assertions.assertEquals(s,actualResult,0.0001);
     }
 
 }
